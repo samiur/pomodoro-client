@@ -1,0 +1,1 @@
+!function(){app.directive("ngCheckbox",function(){return{restrict:"C",require:"ngModel",link:function(n,e,t){return $(e).checkbox(),n.$watch(t.ngModel,function(){return $(e).checkbox("checked",t.ngModel)}),e.on("toggle",function(){return n.$apply(function(){return n.$eval(""+t.ngModel+" = "+t.ngModel+" ? false : true")})})}}})}.call(this);

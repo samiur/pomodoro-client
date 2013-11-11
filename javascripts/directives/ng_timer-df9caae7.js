@@ -1,0 +1,1 @@
+!function(){app.directive("ngTimer",["$timeout",function(){return{restrict:"A",template:"<div class='timer'>{{toMin(time)}} minutes and {{toSec(time)}} seconds</div>",link:function(t){return t.toMin=function(t){return Math.floor(t.sec/60)},t.toSec=function(t){return t.sec%60}},scope:{time:"="},controller:function(){}}}])}.call(this);
