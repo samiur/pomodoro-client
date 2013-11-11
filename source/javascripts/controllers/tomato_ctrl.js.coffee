@@ -47,7 +47,7 @@ app.controller 'TomatoCtrl', ["$scope", "$timeout", "$modal", "$cookieStore",
   $scope.loaded = false
 
   unless Session.loggedIn()
-    $window.location = '/home.html'
+    $window.location = 'home.html'
 
   $scope.tomatoInProgress = false
 

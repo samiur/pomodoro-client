@@ -1,8 +1,6 @@
-app.controller 'DashboardCtrl', ["$scope", "$rootScope", "$window", "Tomato", "User", "Session", ($scope, $rootScope, $window, Tomato, User, Session) ->
+app.controller 'DashboardCtrl', ["$scope", "$cookieStore", "$rootScope", "$window", "Tomato", "User", "Session", ($scope, $cookieStore, $rootScope, $window, Tomato, User, Session) ->
   unless Session.loggedIn()
-  # Session.signIn("groundhawk2006@gmail.com", "joyboytoy")
-  #  $location.path('/home.html').replace()
-    $window.location = '/home.html'
+    $window.location = 'home.html'
 
   $scope.loaded = false
 

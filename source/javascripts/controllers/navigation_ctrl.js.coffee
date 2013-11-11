@@ -8,10 +8,10 @@ app.controller 'NavigationCtrl', ["$scope", "$rootScope", "$window", "User", "Se
       $rootScope.$broadcast 'currentUserReady'
     , (response, status) ->
       console.log "Failed to use AuthToken, clearing cookies"
-      $window.location = '/home.html'
+      $window.location = 'home.html'
 
   $scope.signOut = ->
     Session.signOut().then ->
       console.log "Signed Out!"
-      $window.location = '/home.html'
+      $window.location = 'home.html'
 ]
