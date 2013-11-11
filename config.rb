@@ -51,6 +51,8 @@ set :js_dir, 'javascripts'
 
 set :images_dir, 'images'
 
+set :relative_links, true
+
 configure :development do
 #  activate :relative_assets
 end
