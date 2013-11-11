@@ -1,1 +1,0 @@
-!function(){app.directive("breakTomato",function(){return{restrict:"A",templateUrl:"/templates/breakTomato.html",link:function(){},scope:{tomato:"="},controller:["$scope","$element","$attrs",function(t){return t.addTask=function(){return t.tomato.addTask(t.task),t.task=""}}]}})}.call(this);
