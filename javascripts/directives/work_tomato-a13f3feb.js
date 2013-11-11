@@ -1,1 +1,0 @@
-!function(){app.directive("workTomato",function(){return{restrict:"A",templateUrl:"/templates/workTomato.html",link:function(){var t;return t=angular.element('input[type="checkbox"]'),t.each(function(){return this.checkbox()})},scope:{tomato:"="},controller:function(t){return t.addTask=function(){return t.tomato.addTask(t.task),t.task=""}}}})}.call(this);

@@ -1,0 +1,1 @@
+!function(){angular.module("Pomodoro.services",["ui.bootstrap","ui.keypress","rails","ng-rails-csrf","ngCookies","ui.jq"]),this.app=angular.module("Pomodoro",["Pomodoro.services"]),this.apiRootUrl="http://pomodoro-tracker.herokuapp.com",console.log(this.apiRootUrl)}.call(this);
