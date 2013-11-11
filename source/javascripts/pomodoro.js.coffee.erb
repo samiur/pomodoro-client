@@ -7,5 +7,6 @@ angular.module('Pomodoro.services', ['ui.bootstrap', 'ui.keypress', 'rails', 'ng
 @apiRootUrl = "http://pomodoro-tracker.herokuapp.com"
 <% else %>
 @apiRootUrl = "NO IDEA"
-console.log '<%= environment %>'
 <% end %>
+
+console.log @apiRootUrl

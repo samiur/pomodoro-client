@@ -12,7 +12,7 @@ app.factory 'TomatoSerializer', ['railsSerializer', (railsSerializer) ->
 
 app.factory 'Tomato', ['$timeout', 'RailsResource', 'TomatoSerializer', ($timeout, RailsResource, TomatoSerializer) ->
   class Tomato extends RailsResource
-    @configure url: '#{apiRootUrl}/users/{{userId}}/tomatoes/{{id}}', name: 'tomato',
+    @configure url: "#{apiRootUrl}/users/{{userId}}/tomatoes/{{id}}", name: 'tomato',
     serializer: TomatoSerializer
 
     planStage:

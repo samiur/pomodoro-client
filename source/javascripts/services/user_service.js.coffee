@@ -1,6 +1,6 @@
 app.factory 'User', ['RailsResource', 'railsSerializer', (RailsResource, railsSerializer) ->
   class User extends RailsResource
-    @configure url: '#{apiRootUrl}/users', name: 'user', rootWrapping: false,
+    @configure url: "#{apiRootUrl}/users", name: 'user', rootWrapping: false,
     serializer: railsSerializer ->
       @resource('tomatoes', 'Tomato')
 ]

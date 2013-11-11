@@ -27,7 +27,7 @@ class Timer
     @finished = false
 
 
-ModalInstanceCtrl = ($scope, $modalInstance, title, text) ->
+ModalInstanceCtrl = ["$scope", "$modalInstance", "title", "text", ($scope, $modalInstance, title, text) ->
   $scope.title = title
   $scope.text = text
 
@@ -36,10 +36,11 @@ ModalInstanceCtrl = ($scope, $modalInstance, title, text) ->
 
   $scope.cancel = ->
     $modalInstance.dismiss('cancel')
+]
 
 app.controller 'TomatoCtrl', ["$scope", "$timeout", "$modal", "$cookieStore",
-"$window", "timerService", "Tomato", "User", "Session",
-($scope, $timeout, $modal, $cookieStore, $window, timerService, Tomato, User, Session) ->
+"$window", "Tomato", "User", "Session",
+($scope, $timeout, $modal, $cookieStore, $window, Tomato, User, Session) ->
   $scope.breakTime = 5
   $scope.planTime = 5
   $scope.workTime = 20
