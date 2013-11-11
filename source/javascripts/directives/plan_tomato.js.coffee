@@ -1,6 +1,6 @@
 app.directive 'planTomato', ->
   restrict: "A"
-  templateUrl: '/templates/planTomato.html'
+  templateUrl: 'templates/planTomato.html'
   link: (scope, elem, attrs) ->
   scope:
     tomato: "="

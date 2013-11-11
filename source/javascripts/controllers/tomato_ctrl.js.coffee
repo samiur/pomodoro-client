@@ -60,11 +60,11 @@ app.controller 'TomatoCtrl', ["$scope", "$timeout", "$modal", "$cookieStore",
     $scope.tomato.start()
     $scope.tomatoInProgress = true
     $scope.$watch "tomato.started", (newVal, oldVal) ->
-      unless newVal
+      if $scope.tomatoInProgress and !newVal
         if $scope.tomato.completed
           $scope.tomatoInProgress = false
           $scope.tomato.create().then ->
-            $window.location = '/dashboard.html'
+            $window.location = 'dashboard.html'
           , ->
             console.log "Tomato add failed"
         else
@@ -72,7 +72,7 @@ app.controller 'TomatoCtrl', ["$scope", "$timeout", "$modal", "$cookieStore",
           current_mode = $scope.tomato.previousStage()
           nextMode = $scope.tomato.newStage()
           modalInstance = $modal.open
-            templateUrl: '/templates/modalInstance.html'
+            templateUrl: 'templates/modalInstance.html'
             controller: ModalInstanceCtrl
             resolve:
               title: -> "#{current_mode.title} done! Up next: #{nextMode.title}"
@@ -85,10 +85,10 @@ app.controller 'TomatoCtrl', ["$scope", "$timeout", "$modal", "$cookieStore",
               console.log result))
 
   $scope.cancelTomato = (tomato) ->
-    tomato.stop()
     $scope.tomatoInProgress = false
+    tomato.stop()
     tomato.create().then ->
-      $window.location = '/dashboard.html'
+      $window.location = 'dashboard.html'
     , ->
       console.log "Tomato add failed"
 ]

@@ -1,6 +1,6 @@
 app.directive 'workTomato', ->
   restrict: "A"
-  templateUrl: '/templates/workTomato.html'
+  templateUrl: 'templates/workTomato.html'
   link: (scope, elem, attrs) ->
     checkboxes = angular.element('input[type="checkbox"]')
     checkboxes.each ->
